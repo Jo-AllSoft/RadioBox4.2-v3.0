@@ -1,0 +1,46 @@
+~inc:header.inc~
+<div id="content">
+    
+
+
+    <div> <h1>Options</h1>(~Name_Config~)</div> 
+
+<form method="get" action="Options.htm">
+
+    
+        
+<!--        <tr><td>Max Fader<input type="number" name="MaxF" min="0" max="4900" value="~value_Max_Fader~">[mv] </td></tr>
+        <tr><td>Min Fader<input type="number" name="MinF" min="0" max="4900" value="~value_Min_Fader~">[mv]  </td></tr>
+        <tr><td>Buttee Fader<input type="number" name="ButF" min="0" max="5000" value="~value_But_Fader~">[mv]  </td></tr>
+        <tr><td>CMD MIDI Start<input type="number" min="-255" max="255" name="M1" value="~Number_Midi1~"> <input type="number" min="-255" max="255" name="M2" value="~Number_Midi2~"> <input type="number" min="-255" max="255" name="M3" value="~Number_Midi3~"></td></tr>
+        <tr><td>CMD MIDI Stop<input type="number" min="-255" max="255" name="F1" value="~Number_Midi_OFF1~"><input type="number" min="-255" max="255" name="F2" value="~Number_Midi_OFF2~"><input type="number" min="-255" max="255" name="F3" value="~Number_Midi_OFF3~">  </td></tr>
+        <tr><td>Time Overload<input type="number" name="TOV" min="0" max="4900" value="~value_TOV~">[N*50ms]wait </td></tr>-->
+
+        <fieldset style="width: 300px">
+             <h3>Line 1</h3>
+            <table>
+                <tr Title="Niveau de saturation" ><td>Seuil Overload</td><td><input  style="width: 70px" type="number" name="OV1" min="0" max="4900" value="~value_Overload1~">[mv] </td></tr>
+                <tr Title="Niveau de detection du silence" ><td>Detection Silence</td><td><input   style="width: 70px" type="number" name="STO1" min="0" max="4900" value="~Detection_Muting1~">[mv] </td></tr>
+                <tr Title="Temps en mode silence avant de remettre le gain" ><td>Temps Silence</td><td><input style="width: 70px" type="number" name="Nde1" min="10" max="60000" value="~Time_Muting1~">[ms]</td></tr>
+                <tr><td><input  style="width: 50px" type="submit" name="OK1" value="OK"></td></tr>
+            </table>
+        </fieldset>
+
+        <fieldset style="width: 300px">
+            <h3>Line 2</h3>
+            <table>
+                <tr Title="Niveau de saturation" ><td>Seuil Overload</td><td><input  style="width: 70px" type="number" name="OV2" min="0" max="4900" value="~value_Overload2~">[mv] </td></tr>
+                <tr Title="Niveau de detection du silence" ><td>Detection Silence</td><td><input style="width: 70px" type="number" name="STO2" min="0" max="4900" value="~Detection_Muting2~">[mv] </td></tr>
+                <tr Title="Temps en mode silence avant de remettre le gain" ><td>Temps Silence</td><td><input style="width: 70px" type="number" name="Nde2" min="10" max="60000" value="~Time_Muting2~">[ms]</td></tr>
+                <tr><td><input style="width: 50px" type="submit" name="OK2" value="OK"></td></tr>
+            </table>
+        </fieldset>
+        
+       
+    
+    
+</form>
+
+<!--<img src="/loader.gif" alt="loading">Contiendra les options possibles pour l'appareil.<img src="/loader.gif" alt="loading">-->
+</div>
+~inc:footer.inc~

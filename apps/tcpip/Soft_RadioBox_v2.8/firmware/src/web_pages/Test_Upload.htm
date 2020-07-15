@@ -1,0 +1,96 @@
+~inc:header.inc~
+<div id="content">
+
+    <h1>Select config &amp; Save</h1>
+
+        
+        
+
+       
+    <form method="post" action="Test_Upload.htm" >
+
+        <Table>
+            <tr><td><input type="submit" name="Sel" id="SelectPost" hidden></td></tr>
+            <tr><td><input type="submit" id="BTN_Radio" value="radioCheck" hidden></td></tr>
+            <tr>
+                <td><input type="radio" name="ch" value="0" onchange="ChangeRadio()" ~Checked(0)~ ></td>
+                <td> ~Config_Defaut(0)~</td>
+            </tr>
+            
+            <tr>
+                <td><input type="radio" name="ch" value="1" onchange="ChangeRadio()" ~Checked(1)~></td>
+                <td><input type="text" value="~Config_Defaut(1)~" name="txt2" maxlength="20" ~disabled(1)~></td>
+            </tr>
+            
+            <tr>
+                <td><input type="radio" name="ch" value="2" onchange="ChangeRadio()" ~Checked(2)~></td>
+                <td><input type="text" value="~Config_Defaut(2)~" name="txt3" maxlength="20" ~disabled(2)~></td>
+            </tr>
+            
+            <tr>
+                <td><input type="radio" name="ch" value="3" onchange="ChangeRadio()" ~Checked(3)~></td>
+                <td><input type="text" value="~Config_Defaut(3)~" name="txt4" maxlength="20" ~disabled(3)~></td>
+            </tr>
+            
+            <tr>
+                <td><input type="radio" name="ch" value="4" onchange="ChangeRadio()" ~Checked(4)~></td>
+                <td><input type="text" value="~Config_Defaut(4)~" name="txt5" maxlength="20" ~disabled(4)~></td>
+            </tr>
+            
+        </Table>
+            
+<!--    </form>   -->
+    
+     <fieldset style="width:400px;" ~CacheModeUsine~>
+    <table >
+        <tr>
+            <td><input type="submit" style="width: 130px" value="Save" name="SV" id="Save_Data1" onclick="ChangePost()" title="Sauvgarde la configuration s&eacute;l&eacute;ction&eacute;e"></td>    
+            <td> <input type="submit" name="Dow" id="BTNDow1" hidden> <a  href="CSV_Config/~ConfigCSV~" download="~Name_Config~.csv" > <input  type="button" style="width: 130px" value="Download" onclick="Fct_Btn_Down1()" title="T&eacute;l&eacute;charge la configuration s&eacute;l&eacute;ction&eacute;e "> </a>  </td> 
+            <td><input type="submit" style="width: 130px" value="Defaut Usine" name="RST" title="Configure par d&eacute;faut la configuration s&eacute;l&eacute;ction&eacute;e" onclick="var RstUsine=confirm(' !!! Etes vous sur de vouloir mettre en default usine ?');return RstUsine;"></td>        
+        </tr>
+    </table>
+    </fieldset>
+
+</form> 
+  
+  
+  <form action="Test_Upload1.htm" method="post" enctype="multipart/form-data" ~CacheModeUsine~>
+
+      
+    <fieldset style="width:400px;">
+        <b>File: </b>&nbsp;
+        <input type="file"  name="UP" size="600" /> &nbsp;
+        <input type="submit" name="UPL" style="width: 100px" value="Upload" title="Charge le fichier choisi dans la configuration s&eacute;l&eacute;ction&eacute;e"/>
+    </fieldset>
+
+
+  </form>
+</div>
+
+<script type="text/javascript">
+
+// Parses the xmlResponse from status.xml and updates the status box
+function ChangeRadio() 
+{
+    document.getElementById("BTN_Radio").click();
+//    document.getElementById("SelectPost").click();
+}
+
+function ChangePost() 
+{
+    document.getElementById("SelectPost").click();
+}
+
+function Fct_Btn_Down1()
+{
+    document.getElementById("BTNDow1").click();
+}
+function updateStatus(xmlData) 
+{
+    document.getElementById('ConfigCSV').innerHTML = getXMLValue(xmlData, 'ConfigCSV');
+}
+
+setTimeout("newAJAXCommand('status.xml', updateStatus, true)",500);
+
+</script>
+~footer~

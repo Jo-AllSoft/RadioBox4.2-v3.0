@@ -1,0 +1,20 @@
+~inc:header.inc~
+<div id="content">
+
+<h1>Restart In Progress...</h1>
+
+<p>Your settings were successfully saved.
+
+<p align="center"><b>Your board is now located at: 
+<a href="http://~config_ip~/">http://~config_ip~/</a></b></p>
+
+
+</div>
+
+<script language="javascript">
+<!--
+function rebootDummy(x){}
+setTimeout("newAJAXCommand('/protect/reboot.cgi',rebootDummy,false);",500);
+//-->
+</script>
+~inc:footer.inc~

@@ -1,0 +1,87 @@
+~inc:header.inc~
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache" content="no store" />
+<meta http-equiv="Expires" content="-1" />
+</head>
+<div id="content">
+
+    <h1>Select config &amp; Save</h1>
+       
+    <form method="post" action="Save_Config.htm" >
+
+        <Table>
+            <tr><td><input type="submit" id="BTN_Radio" value="radioCheck" hidden></td></tr>
+            <tr>
+                <td><input type="radio" name="ch" value="0" onchange="ChangeRadio()" ~Checked(0)~ ></td>
+                <td><input type="text" value="~Config_Defaut(0)~" name="txt1" maxlength="20" ~disabled(0)~></td>
+            </tr>
+            
+            <tr>
+                <td><input type="radio" name="ch" value="1" onchange="ChangeRadio()" ~Checked(1)~></td>
+                <td><input type="text" value="~Config_Defaut(1)~" name="txt2" maxlength="20" ~disabled(1)~></td>
+            </tr>
+            
+            <tr>
+                <td><input type="radio" name="ch" value="2" onchange="ChangeRadio()" ~Checked(2)~></td>
+                <td><input type="text" value="~Config_Defaut(2)~" name="txt3" maxlength="20" ~disabled(2)~></td>
+            </tr>
+            
+            <tr>
+                <td><input type="radio" name="ch" value="3" onchange="ChangeRadio()" ~Checked(3)~></td>
+                <td><input type="text" value="~Config_Defaut(3)~" name="txt4" maxlength="20" ~disabled(3)~></td>
+            </tr>
+            
+            <tr>
+                <td><input type="radio" name="ch" value="4" onchange="ChangeRadio()" ~Checked(4)~></td>
+                <td><input type="text" value="~Config_Defaut(4)~" name="txt5" maxlength="20" ~disabled(4)~></td>
+            </tr>
+            
+        </Table>
+            
+<!--    </form>   -->
+    
+    
+    <table>
+        <tr>
+            <td><input type="submit" value="Save" name="SV" id="Save_Data1" title="Sauvgarde la configuration s&eacute;l&eacute;ction&eacute;e"></td>      
+            <td><input type="submit" value="Reset" name="RST" title="Configure par d&eacute;faut la configuration s&eacute;l&eacute;ction&eacute;e"></td>        
+            <td> <input type="submit" name="Dow" id="BTNDow1" hidden> <a  href="CSV_Config/~ConfigCSV~" download="~Name_Config~.csv" > <input  type="button" value="Download" onclick="Fct_Btn_Down1()" title="T&eacute;l&eacute;charge la configuration s&eacute;l&eacute;ction&eacute;e "> </a>  </td> 
+            <td><input type="file" size="600" title="Charge une configuration T&eacute;l&eacute;charg&eacute; dans la sauvgarde s&eacute;l&eacute;ction&eacute;e "></td> 
+                <form method="post" action="Save_Config.htm" enctype="multipart/form-data">
+                    <td><input type="submit" value="Upload" name="UPLO" title="Charge le fichier choisi dans la configuration s&eacute;l&eacute;ction&eacute;e"/></td>
+                    </form>
+        </tr>
+    </table>
+
+</form> 
+
+	   
+
+    
+
+</div>
+
+
+
+<script type="text/javascript">
+   
+function ChangeRadio() 
+{
+    document.getElementById("BTN_Radio").click();
+}
+
+function Fct_Btn_Down1()
+{
+    document.getElementById("BTNDow1").click();
+}
+function updateStatus(xmlData) 
+{
+    document.getElementById('ConfigCSV').innerHTML = getXMLValue(xmlData, 'ConfigCSV');
+}
+
+setTimeout("newAJAXCommand('status.xml', updateStatus, true)",500);
+</script>
+~inc:footer.inc~

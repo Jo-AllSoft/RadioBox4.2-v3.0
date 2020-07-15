@@ -1,0 +1,52 @@
+﻿/****************************************************************************************************/
+Soft_RAdioBox_V2 :
+
+le changemnet par rapport a v1 est le remplacement de PT2314 en entree par le TDA7439 (Micro et Line).
+
+/******************************************************************************************************/
+
+Soft_RadioBox_v2.2 :
+
+1.	Changement logo
+
+
+Soft_RadioBox_v2.3 :
+
+1.	Modification trame MIDI a cause d'un bug
+
+
+Soft_RadioBox_v2.4 :
+
+1.	Changement code de l'AD5593 (lecture Fader) Ref interne utiliser
+2.	Chagment echelle Bar Graph pour correspondre a la calibration des tables (1V max --> 0.225V max)
+
+Jamais livré une table avec ce code (26.02.2019)
+
+
+Soft_RadioBox_v2.6 :
+
+correction bug
+5 tables livré avec ce code (28.02.2019)
+
+Soft_RadioBox_v2.7 :
+
+Correction bug sauvgarde default usine(14.03.2019)
+Ajout calibration dans maintenance (14.03.2019)
+Croisement bouton Download et Default Usine dans select config(14.03.2019)
+Ajout confiramtion bouton Default Usine.(14.03.2019)
+Correction affichage reduction gain max que avec ligne 1 et 2.(14.03.2019)
+compressage de la page Input_Audio.htm pour envoyer correctement le "selected" avec le menu deroulant(14.03.2019)
+
+Soft_RadioBox_v2.8 :
+
+modification sauvgarde reprise du code 2.6 pour les sauvgard config
+changement generation footer sur la page Web
+
+Soft_RadioBox_v2.9 :
+  
+ modification du code au niveau de la lecture du fadder pour que l'info de reduction son sois envoyer correctement 
+
+Soft_RadioBox_v3.0 :
+
+Ajout bouton cache acces config
+Correction bug affichae select config page web

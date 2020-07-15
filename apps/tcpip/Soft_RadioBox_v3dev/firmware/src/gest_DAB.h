@@ -1,0 +1,56 @@
+/* ************************************************************************** */
+/** Descriptive File Name
+
+  @Company
+    Company Name
+
+  @File Name
+    filename.h
+
+  @Summary
+    Brief description of the file.
+
+  @Description
+    Describe the purpose of this file.
+ */
+/* ************************************************************************** */
+
+#ifndef _GEST_DAB_H    /* Guard against multiple inclusion */
+#define _GEST_DAB_H
+
+typedef enum{
+    CHANNEL_5A, CHANNEL_5B, CHANNEL_5C, CHANNEL_5D, 
+    CHANNEL_6A, CHANNEL_6B, CHANNEL_6C, CHANNEL_6D, 
+    CHANNEL_7A, CHANNEL_7B, CHANNEL_7C, CHANNEL_7D, 
+    CHANNEL_8A, CHANNEL_8B, CHANNEL_8C, CHANNEL_8D, 
+    CHANNEL_9A, CHANNEL_9B, CHANNEL_9C, CHANNEL_9D, 
+    CHANNEL_10A, CHANNEL_10B, CHANNEL_10C, CHANNEL_10D, CHANNEL_10N, 
+    CHANNEL_11A, CHANNEL_11B, CHANNEL_11C, CHANNEL_11D, CHANNEL_11N, 
+    CHANNEL_12A, CHANNEL_12B, CHANNEL_12C, CHANNEL_12D, CHANNEL_12N, 
+    CHANNEL_13A, CHANNEL_13B, CHANNEL_13C, CHANNEL_13D, CHANNEL_13E, CHANNEL_13F
+}Channels;
+typedef enum{
+    FREQ_5A=174928000, FREQ_5B=176640000, FREQ_5C=178352000, FREQ_5D=180064000, 
+    FREQ_6A=181936000, FREQ_6B=183648000, FREQ_6C=185360000, FREQ_6D=187072000, 
+    FREQ_7A=188928000, FREQ_7B=190640000, FREQ_7C=192352000, FREQ_7D=194064000, 
+    FREQ_8A=195936000, FREQ_8B=197648000, FREQ_8C=199360000, FREQ_8D=201072000, 
+    FREQ_9A=202928000, FREQ_9B=204640000, FREQ_9C=206352000, FREQ_9D=208064000, 
+    FREQ_10A=209936000, FREQ_10B=211648000, FREQ_10C=213360000, 
+    FREQ_10D=215072000, FREQ_10N=210096000, 
+    FREQ_11A=216928000, FREQ_11B=218640000, FREQ_11C=220352000, 
+    FREQ_11D=222064000, FREQ_11N=217088000, 
+    FREQ_12A=223936000, FREQ_12B=225648000, FREQ_12C=227360000, 
+    FREQ_12D=229072000, FREQ_12N=224096000, 
+    FREQ_13A=230784000, FREQ_13B=232496000, FREQ_13C=234208000, 
+    FREQ_13D=235776000, FREQ_13E=237488000, FREQ_13F=239200000}Freq_Channels;
+#define CHANNELS_NUMBERS 41
+#define CHANNELS_LEN 4
+extern const char Name_Channels[CHANNELS_NUMBERS][CHANNELS_LEN];
+
+int Change_Channel(int Num_Channel);
+void Freq_2_Channal (long Freq, char* channel);
+int DAB_channel_stringToNum(char* chan);
+#endif /* _GEST_DAB_H */
+/* *****************************************************************************
+ End of File
+ */

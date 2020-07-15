@@ -1,0 +1,4 @@
+EEPROM,
+reset,0
+act mail,audio=1|input=1|mux=1
+/EEPROM,

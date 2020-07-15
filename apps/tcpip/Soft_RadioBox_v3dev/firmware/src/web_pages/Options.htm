@@ -1,0 +1,41 @@
+~inc:header.inc~
+<div id="content">
+    
+
+
+    <div> <h1>Options</h1>(~Name_Config~)</div> 
+
+<form method="get" action="Options.htm">
+
+    
+        
+
+
+        <fieldset style="width: 300px">
+             <h3>Line 1</h3>
+            <table>
+                <tr Title="Niveau de saturation" ><td>Seuil Overload</td><td><input  style="width: 70px" type="number" name="OV1" min="0" max="4900" value="~value_Overload1~">[mv] </td></tr>
+                <tr Title="Niveau de detection du silence" ><td>Detection Silence</td><td><input   style="width: 70px" type="number" name="STO1" min="0" max="4900" value="~Detection_Muting1~">[mv] </td></tr>
+                <tr Title="Temps en mode silence avant de remettre le gain" ><td>Temps Silence</td><td><input style="width: 70px" type="number" name="Nde1" min="10" max="60000" value="~Time_Muting1~">[ms]</td></tr>
+                <tr><td><input  style="width: 50px" type="submit" name="OK1" value="OK"></td></tr>
+            </table>
+        </fieldset>
+
+        <fieldset style="width: 300px">
+            <h3>Line 2</h3>
+            <table>
+                <tr Title="Niveau de saturation" ><td>Seuil Overload</td><td><input  style="width: 70px" type="number" name="OV2" min="0" max="4900" value="~value_Overload2~">[mv] </td></tr>
+                <tr Title="Niveau de detection du silence" ><td>Detection Silence</td><td><input style="width: 70px" type="number" name="STO2" min="0" max="4900" value="~Detection_Muting2~">[mv] </td></tr>
+                <tr Title="Temps en mode silence avant de remettre le gain" ><td>Temps Silence</td><td><input style="width: 70px" type="number" name="Nde2" min="10" max="60000" value="~Time_Muting2~">[ms]</td></tr>
+                <tr><td><input style="width: 50px" type="submit" name="OK2" value="OK"></td></tr>
+            </table>
+        </fieldset>
+        
+       
+    
+    
+</form>
+
+<!--<img src="/loader.gif" alt="loading">Contiendra les options possibles pour l'appareil.<img src="/loader.gif" alt="loading">-->
+</div>
+~footer~

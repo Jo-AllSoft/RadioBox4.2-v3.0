@@ -1,0 +1,224 @@
+~inc:header.inc~
+<div id="content">
+
+<style >
+th {
+    padding: 0px;
+	text-align: left;  
+    
+}
+</style>
+
+    <h1>Audio Input Management </h1>
+    
+    <form method="get" action="Input_Audio.htm">
+	
+	    <table> 
+        <tr>
+        <td> 
+            <select id="InA" name="InA" onchange="Click_Liste()">
+            <option value="0" ~InSelect(0)~>Line 1</option>
+            <option value="1" ~InSelect(1)~>Line 2</option>
+            <option value="2" ~InSelect(2)~>Micro 1</option>
+            <option value="3" ~InSelect(3)~>Micro 2</option>           
+            <option value="4" ~InSelect(4)~>Micro 3</option>
+            <option value="5" ~InSelect(5)~>Micro 4</option>
+            <option value="3" ~InSelect(6)~ hidden>Micro 2 </option>
+
+            </select>(~Name_Config~)
+		</td>  
+        
+        <td width="150" ><span><button id="OKIN" name="OKIN" value = "1" hidden>OK</button></span></td>
+        
+         <td  ~hiddenReduction~>Reduction Max<input type="number" id="Redu" value="~ValueReduction~" name="Redu" min="0" max="20" onchange="Click_Liste()" > [dB]</td>
+        
+        
+        </tr>
+        </table> 
+		
+	    <table class="text" style="width:600px;  padding-top: 10px; table-layout: fixed" >
+            <tr> 
+			
+				<th><h4>Gain</h4></th>
+                <th><h4>Bass</h4></th>
+                <th ~cacheMiddle~><h4>Middle</h4></th>
+                <th><h4>Treble </h4></th>
+			
+                
+            </tr> 
+			<tr>
+			<th><h4 id="Vol"></h4></th>
+			<th><h4 id="BaIn"></h4></th>
+            <th ~cacheMiddle~ ><h4 id="MIn"></h4></th>
+			<th><h4 id="AiIn"></h4></th>
+			</tr> 
+            <tr>  
+			<td>12dB</td>				
+            <td>14dB</td>
+            <td ~cacheMiddle~ >14dB</td>
+            <td>14dB</td>
+            
+
+            </tr>
+            
+
+        </table>
+        <table style="width:600px;  padding-top: 170px; table-layout: fixed" >
+            <tr>
+			<td><input  class="Fader2" step="1" min="-31" max="12"value="~ValV~" type='range'id="ValV" name="ValV" onchange="Refresh_Volume()"/><button name="RefV" id = "Refresh_Val_Volume" value = "1" hidden="hidden"></button></td>  					
+            <td><input  class="Fader1" step="2" min="-14" max="14"value="~ValB~" type='range'id="ValB" name="ValB" onchange="Refresh_Basse()"/><button name="RefB" id = "Refresh_Val_Basse" value = "1" hidden="hidden"></button></td>
+            <td ~cacheMiddle~ ><input  class="Fader1" step="2" min="-14" max="14"value="~ValC~" type='range'id="ValC" name="ValC" onchange="Refresh_Middle()" /><button name="RefC" id = "Refresh_Val_Middle" value = "1" hidden="hidden"></button></td>
+            <td><input  class="Fader1" step="2" min="-14" max="14"value="~ValA~"type='range'id="ValA" name="ValA" onchange="Refresh_Aigue()"/><button name="RefA" id = "Refresh_Val_Aigue" value = "1" hidden="hidden"></button></td>       
+            </tr>
+        </table>
+		
+        <table style="width:600px;  padding-top: 110px; table-layout: fixed" >
+            
+            <tr>  
+			<td>Mute</td>					
+            <td>-14dB</td>
+            <td ~cacheMiddle~>-14dB</td>
+            <td>-14dB</td>
+            
+         
+            </tr>            
+        </table>
+		
+<!--		<button  style="width:180px" name ="App" value = "1">Save</button> -->
+
+    </form>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+// Parses the xmlResponse from status.xml and updates the status box
+
+    var Middle = document.getElementById("ValC");
+    var Basse = document.getElementById("ValB");
+    var Aigue = document.getElementById("ValA");
+    var Volume = document.getElementById("ValV");
+    
+    var Res_Basse = document.getElementById("BaIn");
+    var Res_Middle = document.getElementById("MIn");
+    var Res_Aigue = document.getElementById("AiIn");
+    var Res_Volume = document.getElementById("Vol");
+    
+    var Save_Select = document.getElementById("InA").selectedIndex;;
+    var Change_Value = 0;
+    
+
+	
+  
+    Basse.addEventListener("input", function() 
+    {
+        Res_Basse.innerHTML = Basse.value+" dB";
+    }, false);  
+    
+    Middle.addEventListener("input", function() 
+    {
+        Res_Middle.innerHTML = Middle.value+" dB";
+    }, false); 
+    
+    Aigue.addEventListener("input", function() 
+    {
+        Res_Aigue.innerHTML = Aigue.value+" dB";
+    }, false); 
+    Volume.addEventListener("input", function() 
+    {
+        if(Volume.value >= -30)
+        {
+            Res_Volume.innerHTML = Volume.value+" dB";
+        }
+        else
+        {
+            Res_Volume.innerHTML = "Mute";
+        }
+    }, false); 
+	
+ 
+	
+	
+	document.getElementById("BaIn").innerHTML = Basse.value+" dB";
+    document.getElementById("MIn").innerHTML = Middle.value+" dB";
+	document.getElementById("AiIn").innerHTML = Aigue.value+" dB";
+    if(Volume.value >= -30)
+    {    
+        document.getElementById("Vol").innerHTML = Volume.value+" dB";
+    }
+    else
+    {
+        document.getElementById("Vol").innerHTML = "Mute";
+    }
+ 
+	document.getElementById('ValVol').innerHTML = getXMLValue(xmlData, 'ValV');//affiche la valeur en memoire lors de la mise a jour de la page
+	document.getElementById('ValB').innerHTML = getXMLValue(xmlData, 'ValB');
+    document.getElementById('ValC').innerHTML = getXMLValue(xmlData, 'ValC');
+	document.getElementById('ValA').innerHTML = getXMLValue(xmlData, 'ValA');
+    
+    document.getElementById('inlo').innerHTML = getXMLValue(xmlData, 'inlo');
+	
+	
+	function Refresh_Volume() 
+	{
+        Change_Value = 1; 
+        document.getElementById("Refresh_Val_Volume").click();
+	}
+	function Refresh_Basse() 
+	{
+        Change_Value = 1; 
+        document.getElementById("Refresh_Val_Basse").click();
+	}
+    function Refresh_Middle() 
+	{
+        Change_Value = 1; 
+        document.getElementById("Refresh_Val_Middle").click();
+	}
+	function Refresh_Aigue() 
+	{
+        Change_Value = 1; 
+        document.getElementById("Refresh_Val_Aigue").click();
+	}
+    
+    function saveActinlo() 
+    {
+        document.getElementById("inlo").click();
+        Change_Value = 1;    
+    }
+				
+	function Click_Liste()
+	{
+        document.getElementById("OKIN").click();
+//        if(Change_Value == 1 )
+//        {
+//            if(confirm(' !!! Les changement pas sauver !!! , cliquer sur Annuler.') != true)
+//            {	
+//                document.getElementById("InA").selectedIndex = Save_Select;
+//            }
+//            else
+//            {
+//                document.getElementById("OKIN").click();
+//            }
+//        }
+//        else
+//        {
+//            document.getElementById("OKIN").click();
+//            Change_Value = 0; 
+//        }      
+//        Save_Select = document.getElementById("InA").selectedIndex;
+	}
+    
+
+	
+
+		
+function updateStatus(xmlData) 
+{
+    document.getElementById('LoudnessTxtin').innerHTML = getXMLValue(xmlData, 'LoudnessTxtin');
+}	
+setTimeout("newAJAXCommand('status.xml', updateStatus, true)",500);
+
+</script>
+~inc:footer.inc~

@@ -1,0 +1,42 @@
+~inc:header.inc~
+<div id="content">
+
+  <h1>Backup</h1>
+  
+  <form action="/device/backup.htm" method="post" enctype="multipart/form-data">
+    <div class="examplebox">
+      ~uploadedmd5~
+      <p style="margin-bottom: 2px"><b>File: </b>&nbsp;
+        <input type="file" name="md5file" size="600" /> &nbsp;
+        <input type="submit" value="Save" />
+      </p>
+	  Backup state:<div "right" id="stateBackup"> ~stateBackup~ </div>
+	  <a href="/TestUpload.csv" download>Download</a>
+	  <img src="/loader.gif" alt="loading" id = "loadingGif" hidden="hidden">
+    </div>
+  </form>
+</div>
+
+<script type="text/javascript">
+
+// Parses the xmlResponse from status.xml and updates the status box
+function updateStatus(xmlData) 
+{
+	document.getElementById('stateBackup').innerHTML = getXMLValue(xmlData, 'stateBackup');
+	if(getXMLValue(xmlData, 'BCKUP_Ready') == 1)
+	{
+		document.getElementById('loadingGif').hidden = false;
+	}
+	else
+	{
+		document.getElementById('loadingGif').hidden = true;
+	}
+	if(getXMLValue(xmlData, 'stateBackupPopup') == 1)
+	{
+		alert(document.getElementById('stateBackup').innerHTML);
+	}
+}
+
+setTimeout("newAJAXCommand('device_status.xml', updateStatus, true)",500);
+</script>
+~inc:footer.inc~

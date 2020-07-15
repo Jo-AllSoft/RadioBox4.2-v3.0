@@ -1,0 +1,12 @@
+RF_3_2
+Version=3
+C:\microchip\harmony\v1_08_01__02_11_17\apps\tcpip\Soft_RF_V3_2\firmware\src\web_pages
+http://
+
+
+08.12.2017 11:32:49
+NO
+NO
+YES
+YES
+*.html;*.htm;*.vtm;*.vtml;*.asp;*.css;*.shtml;*.phtml;*.php;*.php3;*.xml;*.xsl;*.cfm;*.cfml;*.txt;*.pl;*.cgi;*.snp;*.js;*.vb;*.vbs;*.bas*.mid;*.wav;*.au;*.ra;*.ram;*.bmp;*.gif;*.jpg;*.jpeg;*.png;*.exe;

@@ -1,0 +1,271 @@
+~inc:header.inc~
+<div id="content">
+
+<style >
+th {
+    padding: 0px;
+	text-align: left;  
+    
+}
+</style>
+
+    <h1>Audio Output Management </h1>
+    
+    <form method="get" action="Output_Audio.htm">
+	
+	    <table> 
+        <tr>
+        <td> 
+            <select id="Outs" name="Outs" onchange="Click_Liste()">
+            <option value="0" ~AudioOutSelect(0)~>Studio</option>
+            <option value="1" ~AudioOutSelect(1)~>Master</option>
+            <option value="2" ~AudioOutSelect(2)~>Phone 1</option>
+            <option value="3" ~AudioOutSelect(3)~>Phone 2</option>
+            <option value="4" ~AudioOutSelect(4)~>Phone 3</option>
+            <option value="5" ~AudioOutSelect(5)~>Phone 4</option>
+            <option value="6" ~AudioOutSelect(6)~>Phone DJ</option>
+            <option value="3" ~AudioOutSelect(7)~ hidden>Phone 2</option>
+
+            </select>(~Name_Config~)
+		</td>  
+        
+        <td width="150" ><span><button id="OK" name="OK" value = "1" hidden>OK</button></span></td>
+        <td> <font style="font-size:25px" face="Lucida" ~hiddenMasterGain~ > Gain <label class="switch"><input ~hiddenMasterGain~ type="checkbox"  id="Vloud" onchange="saveActoutlo()" ~MasterGainChecked~><span class="slider" ></span></label></font><button id="outl" name="outl" value="1" hidden="hidden" ></button><span id="MasterGainTxt">~MasterGainTxt~</span></td>        
+        </tr>
+        </table> 
+		
+	    <table class="text" style="width:600px;  padding-top: 10px; table-layout: fixed" >
+            <tr> 			
+				<th><h4>~TxtGainOut~</h4></th>
+                <th><h4>Balance  </h4></th>
+                <th><h4>Bass</h4></th>
+                <th><h4>Treble </h4></th>
+            </tr> 
+			<tr>
+			<th><h4 id="Vol"></h4></th>
+            <th><h4 id="BalL"></h4></th>
+			<th><h4 id="BaIn"></h4></th>
+			<th><h4 id="AiIn"></h4></th>
+			</tr> 
+            <tr>  
+			<td>11.25dB</td>	
+            <td>R -30dB</td>
+            <td>14dB</td>
+            <td>14dB</td>
+            
+
+            </tr>
+            
+
+        </table>
+        <table style="width:600px;  padding-top: 170px; table-layout: fixed" >
+            <tr>
+			<td><input  class="Fader2" step="1.25" min="-31.25" max="11.25"value="~VolO~" type='range'id="ValV" name="ValV" onchange="Refresh_Volume()"/><button name="RefV" id = "Refresh_Val_Volume" value = "1" hidden="hidden"></button></td>  
+            <td><input  class="Fader3" step="1.25" min="-30" max="30"value="~Balance~" type='range'id="Bal" name="Bal" onchange="Refresh_Balance()"/><button name="BaRL" id = "Refresh_Val_Balance" value = "1" hidden="hidden"></button></td>
+            <td><input  class="Fader1" step="2" min="-14" max="14"value="~OVB~" type='range'id="ValB" name="ValB" onchange="Refresh_Basse()"/><button name="RefB" id = "Refresh_Val_Basse" value = "1" hidden="hidden"></button></td>
+            <td><input  class="Fader1" step="2" min="-14" max="14"value="~OVA~"type='range'id="ValA" name="ValA" onchange="Refresh_Aigue()"/><button name="RefA" id = "Refresh_Val_Aigue" value = "1" hidden="hidden"></button></td>
+         
+
+            </tr>
+        </table>
+		
+        <table style="width:600px;  padding-top: 110px; table-layout: fixed" >
+            
+            <tr>  
+			<td>Mute</td>	
+            <td>L-30dB</td>	
+            <td>-14dB</td>
+            <td>-14dB</td>
+            
+         
+            </tr>      
+            <tr>  
+			<td></td>	
+            <td><h4 id="BalR"></h4></td>	
+            <td></td>
+            <td></td>
+            
+         
+            </tr> 
+        </table>
+		
+<!--		<button  style="width:180px" name ="App" value = "1">Save</button> -->
+
+    </form>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+// Parses the xmlResponse from status.xml and updates the status box
+
+
+    var Basse = document.getElementById("ValB");
+    var Aigue = document.getElementById("ValA");
+    var Volume = document.getElementById("ValV");
+    var Balance = document.getElementById("Bal");
+    
+    var Res_Basse = document.getElementById("BaIn");
+    var Res_Aigue = document.getElementById("AiIn");
+    var Res_Volume = document.getElementById("Vol");
+    var Res_Balance = document.getElementById("BalL");
+    
+    var Save_Select = document.getElementById("Outs").selectedIndex;;
+    var Change_Value = 0;
+    
+
+	
+  
+    Basse.addEventListener("input", function() 
+    {
+        Res_Basse.innerHTML = Basse.value+" dB";
+    }, false);  
+
+    Aigue.addEventListener("input", function() 
+    {
+        Res_Aigue.innerHTML = Aigue.value+" dB";
+    }, false); 
+    Volume.addEventListener("input", function() 
+    {
+//        Res_Volume.innerHTML = Volume.value+" dB";
+        if(Volume.value >= -30)
+        {
+            Res_Volume.innerHTML = Volume.value+" dB";
+        }
+        else
+        {
+            Res_Volume.innerHTML = "Mute";
+        }
+    }, false); 
+    Balance.addEventListener("input", function() 
+    {
+        if(Balance.value == 0)
+        {
+           Txt_BalanceL = "L:0dB"; 
+           Txt_BalanceR = "R:0dB";
+        }
+        else if(Balance.value > 0)
+        {      
+            Txt_BalanceL = "L:0dB";
+            Txt_BalanceR = "R:"+Balance.value*(-1)+"dB";     
+        }
+        else if(Balance.value < 0)
+        {
+            Txt_BalanceL = "L:"+Balance.value+"dB";  
+            Txt_BalanceR = "R:0dB";
+        }
+        document.getElementById("BalL").innerHTML = Txt_BalanceL;
+        document.getElementById("BalR").innerHTML = Txt_BalanceR;
+
+        
+    }, false); 
+	
+	
+ 
+	
+	
+	document.getElementById("BaIn").innerHTML = Basse.value+" dB";
+	document.getElementById("AiIn").innerHTML = Aigue.value+" dB";
+    if(Volume.value >= -30)
+    {
+        document.getElementById("Vol").innerHTML = Volume.value+" dB";
+    }
+    else
+    {
+        document.getElementById("Vol").innerHTML = "Mute";
+    }
+    
+//    document.getElementById("BalV").innerHTML = Balance.value+" dB";
+    var Val_Balance;
+    var Txt_BalanceL;
+    var Txt_BalanceR;
+    if(Balance.value == 0)
+    {
+       Txt_BalanceL = "L:0dB"; 
+       Txt_BalanceR = "R:0dB";
+    }
+    else if(Balance.value > 0)
+    {      
+        Txt_BalanceL = "L:0dB";
+        Txt_BalanceR = "R:"+Balance.value*(-1)+"dB";     
+    }
+    else if(Balance.value < 0)
+    {
+        Txt_BalanceL = "L:"+Balance.value+"dB";  
+        Txt_BalanceR = "R:0dB";
+    }
+    document.getElementById("BalL").innerHTML = Txt_BalanceL;
+    document.getElementById("BalR").innerHTML = Txt_BalanceR;
+    
+    
+	document.getElementById('ValVol').innerHTML = getXMLValue(xmlData, 'ValV');//affiche la valeur en memoire lors de la mise a jour de la page
+  
+    document.getElementById('Bal').innerHTML = getXMLValue(xmlData, 'Bal');
+	document.getElementById('ValB').innerHTML = getXMLValue(xmlData, 'ValB');
+	document.getElementById('ValA').innerHTML = getXMLValue(xmlData, 'ValA');
+    
+    document.getElementById('outl').innerHTML = getXMLValue(xmlData, 'outl');
+	
+	
+	function Refresh_Volume() 
+	{
+        Change_Value = 1; 
+        document.getElementById("Refresh_Val_Volume").click();
+	}
+    function Refresh_Balance() 
+	{
+        Change_Value = 1; 
+        document.getElementById("Refresh_Val_Balance").click();
+	}
+	function Refresh_Basse() 
+	{
+        Change_Value = 1; 
+        document.getElementById("Refresh_Val_Basse").click();
+	}
+	function Refresh_Aigue() 
+	{
+        Change_Value = 1; 
+        document.getElementById("Refresh_Val_Aigue").click();
+	}
+    
+    function saveActoutlo() 
+    {
+        document.getElementById("outl").click();
+        Change_Value = 1;    
+    }
+				
+	function Click_Liste()
+	{
+        if(Change_Value == 1 )
+        {
+            if(confirm(' !!! Les changement pas sauver !!! , cliquer sur Annuler.') != true)
+            {	
+                document.getElementById("Outs").selectedIndex = Save_Select;
+            }
+            else
+            {
+                document.getElementById("OK").click();
+            }
+        }
+        else
+        {
+            document.getElementById("OK").click();
+            Change_Value = 0; 
+        }      
+        Save_Select = document.getElementById("Outs").selectedIndex;
+	}
+    
+
+	
+
+		
+function updateStatus(xmlData) 
+{
+    document.getElementById('MasterGainTxt').innerHTML = getXMLValue(xmlData, 'MasterGainTxt');
+}	
+setTimeout("newAJAXCommand('status.xml', updateStatus, true)",500);
+
+</script>
+~inc:footer.inc~

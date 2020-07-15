@@ -1,0 +1,26 @@
+~inc:header.inc~
+<div id="content">
+
+  <h1>Bootloader</h1>
+  
+  <form method="get" action="/maintenance/boot.htm">
+  
+  <span id="Start_Boot"><button onclick="var cfmboot=confirm(' !!! Si vous ne disposez pas du Logiciel PIC32UBL.exe et du ficher de programmation correspondant a l\'appareil, cliquer sur Annuler.');return cfmboot;" style="background-color:#FF0000"name ="Start_Boot" value = "1">Start Bootloader</button></font></span>
+  
+  <div><button name ="erase" value = "1">Erase data EEPROM</button></div> <span id="EEPROM">~EEPROM~</span>
+  <div><button name ="ERASE" value = "1">Erase all EEPROM</button></div> <span id="EEPROM">~EEPROM~</span>
+</div>
+<script type="text/javascript">
+
+// Parses the xmlResponse from status.xml and updates the status box
+function updateStatus(xmlData) 
+{
+	document.getElementById('EEPROM').innerHTML = getXMLValue(xmlData, 'EEPROM');
+}
+
+setTimeout("newAJAXCommand('maintenance_status.xml', updateStatus, true)",500);
+</script>
+<footer>
+<div>Version: ~config_ver~ </div>
+</footer>
+~inc:footer.inc~

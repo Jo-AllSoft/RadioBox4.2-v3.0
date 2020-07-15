@@ -1,0 +1,44 @@
+~inc:header.inc~
+<div id="content">
+	
+<h1>Network Routing</h1>
+
+
+<form method="post" action="/maintenance/routes.htm">
+    <fieldset>
+	    <table style="border-spacing: 5px; text-align: left;" class="rte">
+			<tr>
+				<th> Network </th><th> Netmask </th><th> Gateway </th>
+				
+			</tr>
+			<tr>
+				<td><input class="route" type="text" name="Dst1" value="~Config_rte_dst1~" maxlength = "15"/></td><td><input class="route" type="text" name="Mas1" value="~Config_rte_mask1~" maxlength = "15"/></td><td><input class="route" type="text" name="Net1" value="~Config_rte_interface1~" maxlength = "15"/></td>
+				
+			</tr>
+			<tr>
+				<td><input class="route" type="text" name="Dst2" value="~Config_rte_dst2~" maxlength = "15"/></td><td><input class="route" type="text" name="Mas2" value="~Config_rte_mask2~" maxlength = "15"/></td><td><input class="route" type="text" name="Net2" value="~Config_rte_interface2~" maxlength = "15"/></td>
+				
+			</tr>
+			<tr>
+				<td><input class="route" type="text" name="Dst3" value="~Config_rte_dst3~" maxlength = "15"/></td><td><input class="route" type="text" name="Mas3" value="~Config_rte_mask3~" maxlength = "15"/></td><td><input class="route" type="text" name="Net3" value="~Config_rte_interface3~" maxlength = "15"/></td>
+
+			</tr>
+			<tr>
+				<td><input class="route" type="text" name="Dst4" value="~Config_rte_dst4~" maxlength = "15"/></td><td><input class="route" type="text" name="Mas4" value="~Config_rte_mask4~" maxlength = "15"/></td><td><input class="route" type="text" name="Net4" value="~Config_rte_interface4~" maxlength = "15"/></td>
+
+			</tr>
+			<!--<tr><td></td><td><button value = "1">Save route</button></td>-->
+			<tr><td></td><td><input onclick="var cfm=confirm('Are you sure you want to change Routing ?');return cfm;"  type="submit" class="sm" value="Save Routing" /></td>
+		</table>
+		
+    </fieldset>
+</form>
+
+
+</div>
+
+
+<script type="text/javascript">
+
+</script>
+~footer~

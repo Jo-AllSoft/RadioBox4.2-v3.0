@@ -1,0 +1,40 @@
+~inc:header.inc~
+<div id="content">
+
+<h1>Network Configuration</h1>
+
+
+<form method="post" action="/maintenance/network.htm" name="config">
+	<fieldset>
+		<table style="border-spacing: 5px; text-align: right;" >
+			<tr>
+				<td title="Device name&#10;Used for SNMP traps.">Name :  </td>
+				<td><input type="text" name="name" value="~config_name~" maxlength = "49"/></td>
+			</tr>
+			<tr>
+				<td title="IPV4 type">IP Address :  </td>
+				<td><input type="text" name="ip" value="~config_ip~"/></td>
+			</tr>
+			<tr>
+				<td title="IPV4 type">Gateway :  </td>
+				<td><input type="text" name="gw" value="~config_gw~"/></td>
+			</tr>
+			<tr>
+				<td title="IPV4 type">Subnet Mask :  </td>
+				<td><input type="text" name="sub" value="~config_subnet~"/></td>
+			</tr>
+			<tr>
+				<td title="IPV4 type">Primary DNS :  </td>
+				<td><input type="text" name="dns1" value="~config_dns1~"/></td>
+			</tr>
+			<tr>
+				<td title="NTP server
+Enter IP gateway or your own NTP server.">Server NTP :  </td>
+				<td><input type="text" name="ntp" value="~config_NTP~" maxlength = "29"/></td>
+			</tr>
+			<tr><td></td><td><input onclick="var cfm=confirm('Are you sure you want to change IP ?');return cfm;"  type="submit" class="sm" value="Save" /></td>
+		</table>
+	</fieldset>
+</form>
+</div>
+~inc:footer.inc~

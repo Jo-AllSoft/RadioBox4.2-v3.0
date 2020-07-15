@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/pic32mx_eth_sk/debug/pic32_eth_web_server.X.debug.elf">                 
+    <memory name="program">                 
+      <units>bytes</units>                 
+      <length>450544</length>                 
+      <used>430724</used>                     
+      <free>19820</free>                     
+    </memory>                              
+    <memory name="data">              
+      <units>bytes</units>                 
+      <length>131584</length>                 
+      <used>62232</used>                     
+      <free>69352</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 

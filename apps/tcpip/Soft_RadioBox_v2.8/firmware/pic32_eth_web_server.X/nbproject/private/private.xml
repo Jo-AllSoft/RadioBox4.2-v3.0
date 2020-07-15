@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="13">
+        <file>
+            <url>file:/C:/microchip/harmony/v1_08_01__02_11_17/apps/tcpip/Soft_Table_Mix_Vloic/firmware/src/app.c</url>
+            <bookmark id="8">
+                <name/>
+                <line>985</line>
+                <key/>
+            </bookmark>
+            <bookmark id="7">
+                <name/>
+                <line>1016</line>
+                <key/>
+            </bookmark>
+            <bookmark id="11">
+                <name/>
+                <line>1124</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>file:/C:/microchip/harmony/Soft_TableDeMix/apps/tcpip/Soft_RadioBox_v2.1New/firmware/src/custom_http_app.c</url>
+            <bookmark id="13">
+                <name/>
+                <line>260</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>file:/C:/microchip/harmony/v1_08_01__02_11_17/apps/tcpip/Soft_Table_Mix_Vloic/firmware/src/custom_http_app.c</url>
+            <bookmark id="12">
+                <name/>
+                <line>947</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>file:/C:/microchip/harmony/v1_08_01__02_11_17/apps/tcpip/Soft_Table_Mix_Vloic/firmware/src/EEPROM_Driver.c</url>
+            <bookmark id="5">
+                <name/>
+                <line>248</line>
+                <key/>
+            </bookmark>
+            <bookmark id="9">
+                <name/>
+                <line>1218</line>
+                <key/>
+            </bookmark>
+            <bookmark id="10">
+                <name/>
+                <line>1426</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/framework/crypto/src/asn.c</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/apps/tcpip/Soft_RadioBox_v2dev/firmware/src/app.c</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/apps/tcpip/Soft_RadioBox_v2dev/firmware/src/app.h</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/apps/tcpip/Soft_RadioBox_v2dev/firmware/src/web_pages/maintenance/boot.htm</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/apps/tcpip/Soft_RadioBox_v2dev/firmware/src/main.c</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/framework/tcpip/src/tcp.c</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/apps/tcpip/Soft_RadioBox_v2dev/firmware/src/custom_http_app.c</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/apps/tcpip/Soft_RadioBox_v2dev/firmware/src/App_Task_Usart.c</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/framework/net/pres/src/net_pres.c</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/apps/tcpip/Soft_RadioBox_v2dev/firmware/src/system_config/pic32mx_eth_sk/system_tasks.c</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/framework/tcpip/src/tcpip_manager.c</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/apps/tcpip/Soft_RadioBox_v2dev/firmware/src/Mc32SpiUtil.c</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/apps/tcpip/Soft_RadioBox_v2dev/firmware/src/web_pages/header.inc</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/framework/peripheral/int/templates/int_SourceControl_Default.h</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/apps/tcpip/Soft_RadioBox_v2dev/firmware/src/web_pages/Test_Upload.htm</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/framework/TDRS/I2C_Drivers/drv_i2c_static_buffer_model.c</file>
+            <file>file:/C:/microchip/harmony/Soft_TableDeMix/apps/tcpip/Soft_RadioBox_v2dev/firmware/src/system_config/pic32mx_eth_sk/system_exceptions.c</file>
+        </group>
+    </open-files>
+</project-private>
