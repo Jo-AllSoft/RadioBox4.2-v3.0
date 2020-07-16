@@ -56,6 +56,7 @@
                 <sourceRootElem>../../../../../framework/tcpip</sourceRootElem>
                 <sourceRootElem>../../../../../framework/TDRS</sourceRootElem>
                 <sourceRootElem>../../../../../framework/driver/usart</sourceRootElem>
+                <sourceRootElem>../../../../bootloader</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

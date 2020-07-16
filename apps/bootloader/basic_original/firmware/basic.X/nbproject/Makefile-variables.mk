@@ -1,0 +1,104 @@
+#
+# Generated - do not edit!
+#
+# NOCDDL
+#
+CND_BASEDIR=`pwd`
+# udp_pic32mx_eth_sk configuration
+CND_ARTIFACT_DIR_udp_pic32mx_eth_sk=dist/udp_pic32mx_eth_sk/production
+CND_ARTIFACT_NAME_udp_pic32mx_eth_sk=basic.X.production.hex
+CND_ARTIFACT_PATH_udp_pic32mx_eth_sk=dist/udp_pic32mx_eth_sk/production/basic.X.production.hex
+CND_PACKAGE_DIR_udp_pic32mx_eth_sk=${CND_DISTDIR}/udp_pic32mx_eth_sk/package
+CND_PACKAGE_NAME_udp_pic32mx_eth_sk=basic.x.tar
+CND_PACKAGE_PATH_udp_pic32mx_eth_sk=${CND_DISTDIR}/udp_pic32mx_eth_sk/package/basic.x.tar
+# udp_pic32mz_ec_sk configuration
+CND_ARTIFACT_DIR_udp_pic32mz_ec_sk=dist/udp_pic32mz_ec_sk/production
+CND_ARTIFACT_NAME_udp_pic32mz_ec_sk=basic.X.production.hex
+CND_ARTIFACT_PATH_udp_pic32mz_ec_sk=dist/udp_pic32mz_ec_sk/production/basic.X.production.hex
+CND_PACKAGE_DIR_udp_pic32mz_ec_sk=${CND_DISTDIR}/udp_pic32mz_ec_sk/package
+CND_PACKAGE_NAME_udp_pic32mz_ec_sk=basic.x.tar
+CND_PACKAGE_PATH_udp_pic32mz_ec_sk=${CND_DISTDIR}/udp_pic32mz_ec_sk/package/basic.x.tar
+# udp_pic32mz_ef_sk configuration
+CND_ARTIFACT_DIR_udp_pic32mz_ef_sk=dist/udp_pic32mz_ef_sk/production
+CND_ARTIFACT_NAME_udp_pic32mz_ef_sk=basic.X.production.hex
+CND_ARTIFACT_PATH_udp_pic32mz_ef_sk=dist/udp_pic32mz_ef_sk/production/basic.X.production.hex
+CND_PACKAGE_DIR_udp_pic32mz_ef_sk=${CND_DISTDIR}/udp_pic32mz_ef_sk/package
+CND_PACKAGE_NAME_udp_pic32mz_ef_sk=basic.x.tar
+CND_PACKAGE_PATH_udp_pic32mz_ef_sk=${CND_DISTDIR}/udp_pic32mz_ef_sk/package/basic.x.tar
+# udp_pic32mz_da_sk configuration
+CND_ARTIFACT_DIR_udp_pic32mz_da_sk=dist/udp_pic32mz_da_sk/production
+CND_ARTIFACT_NAME_udp_pic32mz_da_sk=basic.X.production.hex
+CND_ARTIFACT_PATH_udp_pic32mz_da_sk=dist/udp_pic32mz_da_sk/production/basic.X.production.hex
+CND_PACKAGE_DIR_udp_pic32mz_da_sk=${CND_DISTDIR}/udp_pic32mz_da_sk/package
+CND_PACKAGE_NAME_udp_pic32mz_da_sk=basic.x.tar
+CND_PACKAGE_PATH_udp_pic32mz_da_sk=${CND_DISTDIR}/udp_pic32mz_da_sk/package/basic.x.tar
+# usart_pic32mx_eth_sk configuration
+CND_ARTIFACT_DIR_usart_pic32mx_eth_sk=dist/usart_pic32mx_eth_sk/production
+CND_ARTIFACT_NAME_usart_pic32mx_eth_sk=basic.X.production.hex
+CND_ARTIFACT_PATH_usart_pic32mx_eth_sk=dist/usart_pic32mx_eth_sk/production/basic.X.production.hex
+CND_PACKAGE_DIR_usart_pic32mx_eth_sk=${CND_DISTDIR}/usart_pic32mx_eth_sk/package
+CND_PACKAGE_NAME_usart_pic32mx_eth_sk=basic.x.tar
+CND_PACKAGE_PATH_usart_pic32mx_eth_sk=${CND_DISTDIR}/usart_pic32mx_eth_sk/package/basic.x.tar
+# usart_pic32mz_ec_sk configuration
+CND_ARTIFACT_DIR_usart_pic32mz_ec_sk=dist/usart_pic32mz_ec_sk/production
+CND_ARTIFACT_NAME_usart_pic32mz_ec_sk=basic.X.production.hex
+CND_ARTIFACT_PATH_usart_pic32mz_ec_sk=dist/usart_pic32mz_ec_sk/production/basic.X.production.hex
+CND_PACKAGE_DIR_usart_pic32mz_ec_sk=${CND_DISTDIR}/usart_pic32mz_ec_sk/package
+CND_PACKAGE_NAME_usart_pic32mz_ec_sk=basic.x.tar
+CND_PACKAGE_PATH_usart_pic32mz_ec_sk=${CND_DISTDIR}/usart_pic32mz_ec_sk/package/basic.x.tar
+# usart_pic32mz_ef_sk configuration
+CND_ARTIFACT_DIR_usart_pic32mz_ef_sk=dist/usart_pic32mz_ef_sk/production
+CND_ARTIFACT_NAME_usart_pic32mz_ef_sk=basic.X.production.hex
+CND_ARTIFACT_PATH_usart_pic32mz_ef_sk=dist/usart_pic32mz_ef_sk/production/basic.X.production.hex
+CND_PACKAGE_DIR_usart_pic32mz_ef_sk=${CND_DISTDIR}/usart_pic32mz_ef_sk/package
+CND_PACKAGE_NAME_usart_pic32mz_ef_sk=basic.x.tar
+CND_PACKAGE_PATH_usart_pic32mz_ef_sk=${CND_DISTDIR}/usart_pic32mz_ef_sk/package/basic.x.tar
+# usart_pic32mz_da_sk configuration
+CND_ARTIFACT_DIR_usart_pic32mz_da_sk=dist/usart_pic32mz_da_sk/production
+CND_ARTIFACT_NAME_usart_pic32mz_da_sk=basic.X.production.hex
+CND_ARTIFACT_PATH_usart_pic32mz_da_sk=dist/usart_pic32mz_da_sk/production/basic.X.production.hex
+CND_PACKAGE_DIR_usart_pic32mz_da_sk=${CND_DISTDIR}/usart_pic32mz_da_sk/package
+CND_PACKAGE_NAME_usart_pic32mz_da_sk=basic.x.tar
+CND_PACKAGE_PATH_usart_pic32mz_da_sk=${CND_DISTDIR}/usart_pic32mz_da_sk/package/basic.x.tar
+# usbdevice_pic32mx_usb_sk2 configuration
+CND_ARTIFACT_DIR_usbdevice_pic32mx_usb_sk2=dist/usbdevice_pic32mx_usb_sk2/production
+CND_ARTIFACT_NAME_usbdevice_pic32mx_usb_sk2=basic.X.production.hex
+CND_ARTIFACT_PATH_usbdevice_pic32mx_usb_sk2=dist/usbdevice_pic32mx_usb_sk2/production/basic.X.production.hex
+CND_PACKAGE_DIR_usbdevice_pic32mx_usb_sk2=${CND_DISTDIR}/usbdevice_pic32mx_usb_sk2/package
+CND_PACKAGE_NAME_usbdevice_pic32mx_usb_sk2=basic.x.tar
+CND_PACKAGE_PATH_usbdevice_pic32mx_usb_sk2=${CND_DISTDIR}/usbdevice_pic32mx_usb_sk2/package/basic.x.tar
+# usbdevice_pic32mz_ec_sk configuration
+CND_ARTIFACT_DIR_usbdevice_pic32mz_ec_sk=dist/usbdevice_pic32mz_ec_sk/production
+CND_ARTIFACT_NAME_usbdevice_pic32mz_ec_sk=basic.X.production.hex
+CND_ARTIFACT_PATH_usbdevice_pic32mz_ec_sk=dist/usbdevice_pic32mz_ec_sk/production/basic.X.production.hex
+CND_PACKAGE_DIR_usbdevice_pic32mz_ec_sk=${CND_DISTDIR}/usbdevice_pic32mz_ec_sk/package
+CND_PACKAGE_NAME_usbdevice_pic32mz_ec_sk=basic.x.tar
+CND_PACKAGE_PATH_usbdevice_pic32mz_ec_sk=${CND_DISTDIR}/usbdevice_pic32mz_ec_sk/package/basic.x.tar
+# usbdevice_pic32mz_ef_sk configuration
+CND_ARTIFACT_DIR_usbdevice_pic32mz_ef_sk=dist/usbdevice_pic32mz_ef_sk/production
+CND_ARTIFACT_NAME_usbdevice_pic32mz_ef_sk=basic.X.production.hex
+CND_ARTIFACT_PATH_usbdevice_pic32mz_ef_sk=dist/usbdevice_pic32mz_ef_sk/production/basic.X.production.hex
+CND_PACKAGE_DIR_usbdevice_pic32mz_ef_sk=${CND_DISTDIR}/usbdevice_pic32mz_ef_sk/package
+CND_PACKAGE_NAME_usbdevice_pic32mz_ef_sk=basic.x.tar
+CND_PACKAGE_PATH_usbdevice_pic32mz_ef_sk=${CND_DISTDIR}/usbdevice_pic32mz_ef_sk/package/basic.x.tar
+# usbhost_pic32mx_usb_sk2 configuration
+CND_ARTIFACT_DIR_usbhost_pic32mx_usb_sk2=dist/usbhost_pic32mx_usb_sk2/production
+CND_ARTIFACT_NAME_usbhost_pic32mx_usb_sk2=basic.X.production.hex
+CND_ARTIFACT_PATH_usbhost_pic32mx_usb_sk2=dist/usbhost_pic32mx_usb_sk2/production/basic.X.production.hex
+CND_PACKAGE_DIR_usbhost_pic32mx_usb_sk2=${CND_DISTDIR}/usbhost_pic32mx_usb_sk2/package
+CND_PACKAGE_NAME_usbhost_pic32mx_usb_sk2=basic.x.tar
+CND_PACKAGE_PATH_usbhost_pic32mx_usb_sk2=${CND_DISTDIR}/usbhost_pic32mx_usb_sk2/package/basic.x.tar
+# usbhost_pic32mz_ec_sk configuration
+CND_ARTIFACT_DIR_usbhost_pic32mz_ec_sk=dist/usbhost_pic32mz_ec_sk/production
+CND_ARTIFACT_NAME_usbhost_pic32mz_ec_sk=basic.X.production.hex
+CND_ARTIFACT_PATH_usbhost_pic32mz_ec_sk=dist/usbhost_pic32mz_ec_sk/production/basic.X.production.hex
+CND_PACKAGE_DIR_usbhost_pic32mz_ec_sk=${CND_DISTDIR}/usbhost_pic32mz_ec_sk/package
+CND_PACKAGE_NAME_usbhost_pic32mz_ec_sk=basic.x.tar
+CND_PACKAGE_PATH_usbhost_pic32mz_ec_sk=${CND_DISTDIR}/usbhost_pic32mz_ec_sk/package/basic.x.tar
+# usbhost_pic32mz_ef_sk configuration
+CND_ARTIFACT_DIR_usbhost_pic32mz_ef_sk=dist/usbhost_pic32mz_ef_sk/production
+CND_ARTIFACT_NAME_usbhost_pic32mz_ef_sk=basic.X.production.hex
+CND_ARTIFACT_PATH_usbhost_pic32mz_ef_sk=dist/usbhost_pic32mz_ef_sk/production/basic.X.production.hex
+CND_PACKAGE_DIR_usbhost_pic32mz_ef_sk=${CND_DISTDIR}/usbhost_pic32mz_ef_sk/package
+CND_PACKAGE_NAME_usbhost_pic32mz_ef_sk=basic.x.tar
+CND_PACKAGE_PATH_usbhost_pic32mz_ef_sk=${CND_DISTDIR}/usbhost_pic32mz_ef_sk/package/basic.x.tar

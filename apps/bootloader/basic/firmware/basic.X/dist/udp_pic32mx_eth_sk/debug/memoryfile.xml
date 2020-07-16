@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/udp_pic32mx_eth_sk/debug/basic.X.debug.elf">                 
+    <memory name="program">                 
+      <units>bytes</units>                 
+      <length>90880</length>                 
+      <used>86584</used>                     
+      <free>4296</free>                     
+    </memory>                              
+    <memory name="data">              
+      <units>bytes</units>                 
+      <length>131584</length>                 
+      <used>3124</used>                     
+      <free>128460</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
